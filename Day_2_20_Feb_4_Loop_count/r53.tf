@@ -16,5 +16,5 @@ resource "aws_route53_record" "www" {
 #   name    = "roboshop.${var.domain_name}" # roboshop.practicedevops.online
 #   type    = "A"
 #   ttl     = 1
-#   records = [aws_instance.example[index(var.instances, "frontend")].public_ip]
+#   records = [aws_instance.example[index(var.instances, "frontend")].public_ip] # index is a function
 # }

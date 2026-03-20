@@ -15,6 +15,6 @@ resource "aws_route53_record" "www" {
   name    = "roboshop.${var.domain_name}" # mongodb.daws88s.online
   type    = "A"
   ttl     = 1
-  records = [lookup(aws_instance.example, "frontend").public_ip]
+  records = [lookup(aws_instance.example, "frontend").public_ip] # lookup is a function, finding value of a key in a map
   allow_overwrite = true
 }

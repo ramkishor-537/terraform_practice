@@ -21,7 +21,7 @@
 
 resource "aws_instance" "example" {
   #count = 10  
-  count = length(var.instances)
+  count = length(var.instances) # length is a function
   ami           = var.amiid
   instance_type = var.environment == "dev" ? "t3.micro" : "t3.small"
   vpc_security_group_ids = [aws_security_group.allow_tls.id] # .id means output we are getting from aws security group
